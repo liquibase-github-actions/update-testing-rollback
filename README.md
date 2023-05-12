@@ -6,7 +6,7 @@ Updates database, then rolls back changes before updating again. Useful for test
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/update-testing-rollback@v4.21.1
+- uses: liquibase-github-actions/update-testing-rollback@v4.22.0
   with:
     # The root changelog
     # string
@@ -85,7 +85,7 @@ The liquibase update testing rollback action accepts all valid liquibase global 
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/update-testing-rollback@v4.21.1
+  - uses: liquibase-github-actions/update-testing-rollback@v4.22.0
     with:
       changelogFile: ""
       url: ""

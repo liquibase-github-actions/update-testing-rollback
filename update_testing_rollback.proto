@@ -28,9 +28,10 @@ message UpdateTestingRollbackRequest {
   optional string report_name = 12; // [PRO] The name of the report.
   optional string report_path = 13; // [PRO] The path to the directory to generate the report.
   optional bool rollback_on_error = 14; // If set to true and any changeset in a deployment fails, then the update operation stops, and liquibase attempts to rollback all changesets just deployed. A changeset marked "fail-on-error=false" does not trigger as an error, therefore rollback-on-error will not occur. Additionally, if a changeset is not auto-rollback compliant or does not have a rollback script, then no rollback-on-error will occur for any changeset.
-  string url = 15; // *required* The JDBC database connection URL
-  optional string username = 16; // Username to use to connect to the database
-  liquibase.GlobalOptions global_options = 17;
+  optional string tag = 15; // The tag to update to
+  string url = 16; // *required* The JDBC database connection URL
+  optional string username = 17; // Username to use to connect to the database
+  liquibase.GlobalOptions global_options = 18;
 }
 
 message Response {
